@@ -7,9 +7,7 @@ RUN apt-get install -y autoconf pkg-config libssl-dev
 RUN docker-php-ext-install bcmath
 
 # Install composer
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends git zip
-RUN curl --silent --show-error https://getcomposer.org/installer | php
+COPY --from=composer:1.8.0 /usr/bin/composer /usr/bin/composer
 
 # Install Laravel dependencies
 #RUN apt-get install -y \
