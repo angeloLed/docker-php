@@ -24,7 +24,7 @@ make \
 libxrender1 \
 libxtst6 \
 zip \
-unzip \
+unzip 
 
 # Install Laravel dependencies
 #RUN apt-get install -y \
