@@ -9,6 +9,21 @@ RUN docker-php-ext-install bcmath
 # Install composer
 COPY --from=composer:1.8.0 /usr/bin/composer /usr/bin/composer
 
+RUN apt-get install -y --no-install-recommends \
+gpg-agent \
+libpng-dev \
+apt-transport-https \
+software-properties-common \
+openssh-client \
+curl \
+ca-certificates \
+wget \
+git \
+gcc \
+make \
+libxrender1 \
+libxtst6
+
 # Install Laravel dependencies
 #RUN apt-get install -y \
 #        libfreetype6-dev \
