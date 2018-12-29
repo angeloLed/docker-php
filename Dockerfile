@@ -22,7 +22,9 @@ git \
 gcc \
 make \
 libxrender1 \
-libxtst6
+libxtst6 \
+zip \
+unzip \
 
 # Install Laravel dependencies
 #RUN apt-get install -y \
