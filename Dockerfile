@@ -4,7 +4,7 @@ LABEL maintainer "Angelo Landino <angelolandino@hotmail.it>"
 
 RUN apt-get update
 RUN apt-get install -y autoconf pkg-config libssl-dev
-RUN docker-php-ext-install bcmath
+RUN docker-php-ext-install bcmath pdo pdo_mysql
 
 # Install composer
 COPY --from=composer:1.8.0 /usr/bin/composer /usr/bin/composer
