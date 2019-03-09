@@ -24,7 +24,10 @@ make \
 libxrender1 \
 libxtst6 \
 zip \
-unzip 
+unzip \
+zlib1g-dev 
+
+RUN docker-php-ext-install bcmath pdo pdo_mysql mbstring gd zip
 
 # Install Laravel dependencies
 #RUN apt-get install -y \
